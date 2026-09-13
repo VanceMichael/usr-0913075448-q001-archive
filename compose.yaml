@@ -1,0 +1,9 @@
+services:
+  archive-service:
+    build: .
+    ports: ["8080:8080"]
+    volumes: ["archive-data:/data"]
+    environment:
+      ARCHIVE_DB: /data/archive.sqlite
+volumes:
+  archive-data:
